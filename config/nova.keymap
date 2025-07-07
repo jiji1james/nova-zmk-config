@@ -32,7 +32,16 @@
             >;
         };
 
-        raise_layer {
+        nav_layer {
+            bindings = <
+&none  &none  &none  &none  &none    &kp C_VOLUME_UP  &kp HOME        &kp UP_ARROW  &kp END    &none
+&none  &none  &none  &none  &none    &kp C_VOL_DN     &kp LEFT_ARROW  &kp DOWN      &kp RIGHT  &none
+&none  &none  &none  &none  &none    &none            &none           &none         &none      &none
+              &none  &none  &none    &none            &none           &none
+            >;
+        };
+
+        num_layer {
             bindings = <
 &auto_shift TILDE ESCAPE           &trans                             &trans                             &trans                             &trans                   &trans                                     &trans                               &trans                                     &auto_shift LS(MINUS) MINUS                  &auto_shift LS(EQUAL) EQUAL
 &auto_shift LS(NUMBER_1) NUMBER_1  &auto_shift LS(NUMBER_2) NUMBER_2  &auto_shift LS(NUMBER_3) NUMBER_3  &auto_shift LS(NUMBER_4) NUMBER_4  &auto_shift LS(N5) N5    &auto_shift LS(NUMBER_6) NUMBER_6          &auto_shift LS(N7) N7                &auto_shift LS(N8) N8                      &auto_shift LS(N9) N9                        &auto_shift LS(N0) N0
@@ -41,13 +50,22 @@
             >;
         };
 
-        lower_layer {
+        fun_layer {
             bindings = <
 &kp GRAVE  &none    &none   &bt BT_CLR_ALL  &bt BT_CLR       &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &kp F1     &kp F2   &kp F3  &kp F4          &kp F5           &kp F6          &kp F7        &kp F8        &kp F9        &kp F10
 &kp F11    &kp F12  &none   &none           &none            &studio_unlock  &none         &none         &none         &bootloader
                     &trans  &to 0           &kp BACKSPACE    &kp SPACE       &to 0         &trans
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        function_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 };
