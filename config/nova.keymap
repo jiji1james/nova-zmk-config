@@ -36,10 +36,10 @@
             //             | ESC |  1  | SPC |   |BSPC |  2  | DEL |
 
             bindings = <
-&kp Q       &kp W       &kp E         &kp R       &kp T        		&kp Y    	&kp U       &kp I         &kp O       &kp P
-&mt LGUI A  &mt LALT S  &mt LSHIFT D  &mt LCTL F  &kp G        		&kp H    	&mt RCTL J  &mt RSHIFT K  &mt RALT L  &mt RGUI SEMI
-&kp Z       &kp X       &kp C         &kp V       &kp B        		&kp N    	&kp M       &kp COMMA     &kp DOT     &kp RET
-                        &kp ESC       &lt 1 TAB   &mt LCTL SPACE   	&kp BSPC 	&lt 2 RET   &kp DEL
+&kp Q       &kp W       &kp E         &kp R        &kp T              &kp Y     &kp U        &kp I         &kp O       &kp P
+&mt LGUI A  &mt LALT S  &mt LSHIFT D  &mt LCTRL F  &kp G              &kp H     &mt RCTRL J  &mt RSHIFT K  &mt RALT L  &mt RGUI SEMI
+&kp Z       &kp X       &kp C         &kp V        &kp B              &kp N     &kp M        &kp COMMA     &kp DOT     &kp RET
+                        &kp ESC       &lt 1 TAB    &mt LCTRL SPACE    &kp BSPC  &lt 2 RET    &kp DEL
             >;
         };
 
@@ -51,10 +51,10 @@
             //             | ESC |  1  | SPC |   |BSPC |  2  | DEL |
 
             bindings = <
-&as LS(N1) N1 	&as LS(N2) N2 	&as LS(N3) N3  	&as LS(N4) N4  	&as LS(N5) N5    	&as LS(N6) N6     	&as LS(N7) N7       &as LS(N8) N8      	&as LS(N9) N9      	&as LS(N0) N0
-&kp GRAVE      	&none          	&none          	&kp DQT        	&kp QMARK   		&kp UNDER			&kp PLUS			&kp LBRC			&kp RBRC			&kp PIPE
-&kp TILDE       &none          	&none          	&kp SQT        	&kp FSLH           	&kp MINUS			&kp EQUAL			&kp LBKT			&kp RBKT			&kp BSLH
-								&kp ESC       	&lt 1 TAB   	&mt LCTL SPACE   	&kp BSPC 			&lt 2 RET   		&kp DEL
+&as LS(N1) N1  &as LS(N2) N2  &as LS(N3) N3  &as LS(N4) N4  &as LS(N5) N5    &as LS(N6) N6  &as LS(N7) N7  &as LS(N8) N8  &as LS(N9) N9  &as LS(N0) N0
+&kp GRAVE      &none          &none          &kp DQT        &kp QMARK        &kp UNDER      &kp PLUS       &kp LBRC       &kp RBRC       &kp PIPE
+&kp TILDE      &none          &none          &kp SQT        &kp FSLH         &kp MINUS      &kp EQUAL      &kp LBKT       &kp RBKT       &kp BSLH
+                              &kp ESC        &lt 1 TAB      &kt SPACE        &kp BSPC       &lt 2 RET      &kp DEL
             >;
         };
 
@@ -66,10 +66,10 @@
             //             | ESC |  1  | SPC |   |BSPC |  2  | DEL |
 
             bindings = <
-&kp F1      &kp F2   &kp F3        &kp F4        &kp F5          &kp F6   &kp F7      &kp F8     &kp F9     &kp F10
-&kp F11     &kp F12  &none         &none         &none           &none    &kp LEFT    &kp DOWN   &kp UP     &kp RIGHT
-&bt BT_CLR  &none    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &none    &kp HOME    &kp PG_DN  &kp PG_UP  &kp END
-                     &kp ESC       &lt 1 TAB     &kp SPACE       &kp RET  &lt 2 BSPC  &kp DEL
+&kp F1      &kp F2   &kp F3        &kp F4        &kp F5          &kp F6         &kp F7     &kp F8     &kp F9     &kp F10
+&kp F11     &kp F12  &none         &none         &none           &none          &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
+&bt BT_CLR  &none    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &none          &kp HOME   &kp PG_DN  &kp PG_UP  &kp END
+                     &kp ESC       &lt 1 TAB     &kp SPACE       &kp BACKSPACE  &lt 2 RET  &kp DEL
             >;
         };
 
