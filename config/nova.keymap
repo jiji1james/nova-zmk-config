@@ -37,19 +37,19 @@
             //             | ESC |  1  | SPC |   |BSPC |  2  | DEL |
 
             bindings = <
-&kp Q  &kp W       &kp E           &kp R        &kp T        &kp Y      &kp U        &kp I           &kp O       &kp P
-&kp A  &mt LALT S  &mt LEFT_GUI D  &mt LCTRL F  &kp G        &kp H      &mt RCTRL J  &mt LEFT_GUI K  &mt RALT L  &kp BACKSPACE
-&kp Z  &kp X       &kp C           &kp V        &kp B        &kp N      &kp M        &kp COMMA       &kp DOT     &kp RET
-                   &mt LCTRL ESC   &lt 3 TAB    &kp LSHFT    &kp SPACE  &lt 2 TAB    &kp LEFT_ALT
+&kp Q  &kp W       &kp E           &kp R        &kp T            &kp Y      &kp U        &kp I           &kp O       &kp P
+&kp A  &mt LALT S  &mt LEFT_GUI D  &mt LCTRL F  &kp G            &kp H      &mt RCTRL J  &mt LEFT_GUI K  &mt RALT L  &kp BACKSPACE
+&kp Z  &kp X       &kp C           &kp V        &kp B            &kp N      &kp M        &kp COMMA       &kp DOT     &kp RSHIFT
+                   &kp ESC         &lt 3 LALT   &mt LCTRL TAB    &kp SPACE  &lt 2 TAB    &kp RET
             >;
         };
 
         mac {
             bindings = <
-&kp Q  &kp W       &kp E             &kp R        &kp T        &kp Y      &kp U        &kp I           &kp O       &kp P
-&kp A  &mt LALT S  &mt LEFT_GUI D    &mt LCTRL F  &kp G        &kp H      &mt RCTRL J  &mt LEFT_GUI K  &mt RALT L  &kp BACKSPACE
-&kp Z  &kp X       &kp C             &kp V        &kp B        &kp N      &kp M        &kp COMMA       &kp DOT     &kp RET
-                   &mt LEFT_GUI ESC  &lt 3 TAB    &kp LSHFT    &kp SPACE  &lt 2 TAB    &kp LEFT_ALT
+&kp Q  &kp W       &kp E           &kp R        &kp T           &kp Y      &kp U        &kp I           &kp O       &kp P
+&kp A  &mt LALT S  &mt LEFT_GUI D  &mt LCTRL F  &kp G           &kp H      &mt RCTRL J  &mt LEFT_GUI K  &mt RALT L  &kp BACKSPACE
+&kp Z  &kp X       &kp C           &kp V        &kp B           &kp N      &kp M        &kp COMMA       &kp DOT     &kp RIGHT_SHIFT
+                   &kp ESC         &lt 3 LCTRL  &mt LCMD TAB    &kp SPACE  &lt 2 TAB    &kp RET
             >;
         };
 
