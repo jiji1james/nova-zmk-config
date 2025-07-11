@@ -27,7 +27,7 @@
             bindings = <&kp BSPC>;
             key-positions = <5 6>;
             slow-release;
-            layers = <0 2>;
+            layers = <0 1>;
         };
 
         combo_hj_minus {
@@ -76,7 +76,7 @@
         num_sym {
             bindings = <
 &kp N1     &kp N2    &kp N3    &kp N4    &kp N5     &kp N6   &kp N7     &kp N8     &kp N9     &kp N0
-&kp GRAVE  &kp LBKT  &kp LBRC  &kp LPAR  &kp DQT    &kp ESC  &kp MINUS  &kp EQUAL  &kp SEMI   &kp FSLH
+&kp GRAVE  &kp LBKT  &kp LBRC  &kp LPAR  &kp DQT    &kp ESC  &kp MINUS  &kp EQUAL  &kp SEMI   &kp BSPC
 &kp LSHFT  &kp RBKT  &kp RBRC  &kp RPAR  &kp SQT    &kp DEL  &kp UNDER  &kp PLUS   &kp COLON  &kp RSHFT
                      &trans    &to 0     &trans     &trans   &to 2      &trans
             >;
