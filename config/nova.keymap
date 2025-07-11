@@ -13,7 +13,23 @@
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        combo_qw_esc {
+            bindings = <&none>;
+            key-positions = <0 1>;
+            slow-release;
+            layers = <0 1>;
+        };
+
+        combo_op_bspc {
+            bindings = <&none>;
+            key-positions = <8 9>;
+            slow-release;
+            layers = <0 2>;
+        };
+    };
 
     behaviors {
         as: auto_shift {
@@ -51,7 +67,7 @@
             >;
         };
 
-        symbols {
+        num_sym {
             bindings = <
 &kp N1     &kp N2    &kp N3    &kp N4    &kp N5     &kp N6         &kp N7     &kp N8     &kp N9     &kp N0
 &kp GRAVE  &kp LBKT  &kp LBRC  &kp LPAR  &kp DQT    &kp BACKSPACE  &kp MINUS  &kp EQUAL  &kp SEMI   &kp FSLH
@@ -60,7 +76,7 @@
             >;
         };
 
-        right {
+        fun_nav {
             bindings = <
 &kp F1   &kp F2    &kp F3           &kp F4      &kp F5          &kp F6   &kp F7    &kp F8     &kp F9     &kp F10
 &kp F11  &kp CAPS  &kp PRINTSCREEN  &kp INSERT  &kp C_VOL_UP    &trans   &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT
@@ -69,7 +85,7 @@
             >;
         };
 
-        function {
+        mouse_bt {
             bindings = <
 &trans  &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR  &trans
 &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN    &mkp MB4      &mkp LCLK     &mkp MCLK     &mkp RCLK   &mkp MB5
