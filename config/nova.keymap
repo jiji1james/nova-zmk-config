@@ -12,7 +12,26 @@
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        combo_esc {
+            bindings = <&kp ESC>;
+            key-positions = <0 1>;
+        };
+
+        combo_alt_tab {
+            bindings = <&kp LA(TAB)>;
+            key-positions = <10 30>;
+            layers = <0>;
+        };
+
+        combo_ret {
+            bindings = <&kp RET>;
+            key-positions = <23 24>;
+            layers = <0>;
+        };
+    };
 
     behaviors {
         as: auto_shift {
@@ -28,7 +47,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        win_qwerty {
             // -----------------------------------------------------------------------------------------
             // |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  |
             // |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |
@@ -36,14 +55,14 @@
             //             | ESC |  1  | SPC |   |BSPC |  2  | DEL |
 
             bindings = <
-&kp Q       &kp W       &kp E         &kp R        &kp T                  &kp Y      &kp U        &kp I         &kp O       &kp P
-&mt LGUI A  &mt LALT S  &mt LSHIFT D  &mt LCTRL F  &kp G                  &kp H      &mt RCTRL J  &mt RSHIFT K  &mt RALT L  &mt RGUI SEMI
-&kp Z       &kp X       &kp C         &kp V        &kp B                  &kp N      &kp M        &kp COMMA     &kp DOT     &kp RET
-                        &kp ESC       &lt 1 TAB    &mt LCTRL BACKSPACE    &kp SPACE  &lt 2 RET    &kp LEFT_ALT
+&kp Q        &kp W  &kp E     &kp R    &kp T             &kp Y      &kp U  &kp I      &kp O    &kp P
+&kp A        &kp S  &kp D     &kp G    &kp G             &kp H      &kp J  &kp K      &kp L    &kp SEMI
+&mt LSHFT Z  &kp X  &kp C     &kp V    &kp B             &kp N      &kp M  &kp COMMA  &kp DOT  &mt RSHFT FSLH
+                    &kp LALT  &kp TAB  &mt LCTRL BSPC    &kp SPACE  &to 1  &kp RET
             >;
         };
 
-        number_layer {
+        num_sym {
             // -----------------------------------------------------------------------------------------
             // |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |
             // |  `  |     |     |  "  |  ?  |   |  _  |  +  |  {  |  }  |  |  |
@@ -51,10 +70,10 @@
             //             | ESC |  1  | SPC |   |BSPC |  2  | DEL |
 
             bindings = <
-&as LS(N1) N1  &as LS(N2) N2  &as LS(N3) N3  &as LS(N4) N4  &as LS(N5) N5    &as LS(N6) N6  &as LS(N7) N7  &as LS(N8) N8  &as LS(N9) N9  &as LS(N0) N0
-&kp GRAVE      &none          &none          &kp DQT        &kp QMARK        &kp UNDER      &kp PLUS       &kp LBRC       &kp RBRC       &kp PIPE
-&kp TILDE      &none          &none          &kp SQT        &kp FSLH         &kp MINUS      &kp EQUAL      &kp LBKT       &kp RBKT       &kp BSLH
-                              &kp ESC        &lt 1 TAB      &kt SPACE        &kp BSPC       &lt 2 RET      &kp DEL
+&as EXCL N1      &as AT N2  &as HASH N3  &as DLLR N4  &as PRCNT N5      &as CARET N6  &as AMPS N7  &as ASTRK N8  &as LPAR N9  &as RPAR N0
+&as TILDE GRAVE  &kp LEFT   &kp UP       &kp DOWN     &kp RIGHT         &kp MINUS     &kp EQUAL    &kp LBKT      &kp RBKT     &kp BSLH
+&kp LSHFT        &kp HOME   &kp PG_UP    &kp PG_DN    &kp END           &kp DEL       &kp K_CUT    &kp K_COPY    &kp K_PASTE  &kp SQT
+                            &kp ESC      &to 0        &mt LCTRL BSPC    &kp SPACE     &to 2        &kp RET
             >;
         };
 
@@ -66,10 +85,10 @@
             //             | ESC |  1  | SPC |   |BSPC |  2  | DEL |
 
             bindings = <
-&kp F1      &kp F2   &kp F3        &kp F4        &kp F5          &kp F6         &kp F7     &kp F8     &kp F9     &kp F10
-&kp F11     &kp F12  &none         &none         &none           &none          &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
-&bt BT_CLR  &none    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &none          &kp HOME   &kp PG_DN  &kp PG_UP  &kp END
-                     &kp ESC       &lt 1 TAB     &kp SPACE       &kp BACKSPACE  &lt 2 RET  &kp DEL
+&kp F1     &kp F2   &kp F3        &kp F4        &kp F5            &kp F6     &kp F7    &kp F8     &kp F9     &kp F10
+&kp F11    &kp F12  &none         &bt BT_CLR    &none             &none      &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT
+&kp LSHFT  &none    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &kp DEL    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END
+                    &kp LALT      &to 0         &mt LCTRL BSPC    &kp SPACE  &to 0     &kp RET
             >;
         };
 
