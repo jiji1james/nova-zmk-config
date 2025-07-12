@@ -21,12 +21,6 @@
             key-positions = <0 1>;
         };
 
-        combo_alt_tab {
-            bindings = <&kp LA(TAB)>;
-            key-positions = <10 30>;
-            layers = <0>;
-        };
-
         combo_ret {
             bindings = <&kp RET>;
             key-positions = <23 24>;
@@ -41,14 +35,14 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <150>;
+            tapping-term-ms = <250>;
         };
 
-        td_colon: td_colon {
+        td_esc: td_esc {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_COLON";
+            label = "TD_ESC";
             #binding-cells = <0>;
-            bindings = <&kp L>, <&kp SEMI>, <&kp COLON>;
+            bindings = <&kp Q>, <&kp ESC>;
         };
     };
 
@@ -63,10 +57,10 @@
             //             | ESC |  1  | SPC |   |BSPC |  2  | DEL |
 
             bindings = <
-&kp Q        &kp W  &kp E     &kp R      &kp T            &kp Y      &kp U  &kp I      &kp O    &kp P
+&td_esc      &kp W  &kp E     &kp R      &kp T            &kp Y      &kp U  &kp I      &kp O    &kp P
 &kp A        &kp S  &kp D     &kp F      &kp G            &kp H      &kp J  &kp K      &kp L    &kp BSPC
 &mt LSHFT Z  &kp X  &kp C     &kp V      &kp B            &kp N      &kp M  &kp COMMA  &kp DOT  &mt RSHFT FSLH
-                    &kp LALT  &lt 1 ESC  &mt LCTRL TAB    &kp SPACE  &to 1  &kp RET
+                    &kp LALT  &lt 1 TAB  &mt LCTRL RET    &kp SPACE  &to 1  &kp RET
             >;
         };
 
