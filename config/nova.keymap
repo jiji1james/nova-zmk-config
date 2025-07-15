@@ -27,18 +27,6 @@
             layers = <0>;
         };
 
-        combo-lpar {
-            bindings = <&kp LPAR>;
-            key-positions = <10 11>;
-            layers = <0>;
-        };
-
-        combo-rpar {
-            bindings = <&kp RPAR>;
-            key-positions = <12 11>;
-            layers = <0>;
-        };
-
         combo-lbrc {
             bindings = <&kp LBRC>;
             key-positions = <12 13>;
@@ -54,7 +42,7 @@
         combo_bt_clear {
             bindings = <&bt BT_CLR>;
             key-positions = <12 13 14>;
-            layers = <2>;
+            layers = <3>;
         };
     };
 
@@ -83,7 +71,7 @@
 &kp Q        &as AT W  &kp E     &kp R  &kp T            &as MINUS Y      &as EQUAL U  &as LPAR I      &as RPAR O        &kp P
 &kp A        &kp S     &kp D     &kp F  &kp G            &kp H            &kp J        &kp K           &kp L             &kp BSPC
 &mt LSHFT Z  &kp X     &kp C     &kp V  &kp B            &kp N            &kp M        &as SEMI COMMA  &as COLON PERIOD  &mt RSHFT FSLH
-                       &kp LALT  &mo 2  &mt LCTRL TAB    &mt RCTRL SPACE  &mo 1        &kp RET
+                       &kt LALT  &to 2  &mt LCTRL TAB    &mt RCTRL SPACE  &mo 1        &kp RET
             >;
         };
 
@@ -98,7 +86,16 @@
 &as EXCL N1      &as AT N2  &as HASH N3  &as DLLR N4  &as PRCNT N5     &as CARET N6  &as AMPS N7  &as ASTRK N8  &as LPAR N9     &as RPAR N0
 &as TILDE GRAVE  &kp LEFT   &kp UP       &kp DOWN     &kp RIGHT        &kp MINUS     &kp EQUAL    &kp LBKT      &kp RBKT        &kp BSPC
 &kp LSHFT        &kp HOME   &kp PG_UP    &kp PG_DN    &kp END          &kp DEL       &none        &as DQT SQT   &as COLON SEMI  &kp BSLH
-                            &kp ESC      &to 0        &mt LCTRL TAB    &trans        &to 2        &trans
+                            &kp ESC      &to 0        &mt LCTRL TAB    &trans        &trans       &trans
+            >;
+        };
+
+        mouse {
+            bindings = <
+&kp F1   &kp F2  &kp F3    &kp F4  &kp F5            &kp F6     &kp F7          &kp F8           &as F11 F9  &as F12 F10
+&kp TAB  &none   &none     &none   &none             &none      &none           &none            &none       &none
+&kp TAB  &none   &none     &none   &none             &none      &none           &mkp MB4         &mkp MB5    &mkp MB2
+                 &kp LALT  &to 0   &mt LCTRL BSPC    &kp SPACE  &msc SCRL_LEFT  &msc SCRL_RIGHT
             >;
         };
 
@@ -110,10 +107,10 @@
             //             | ESC |  1  | SPC |   |BSPC |  2  | DEL |
 
             bindings = <
-&kp F1     &kp F2   &kp F3        &kp F4        &kp F5            &kp F6          &kp F7          &kp F8           &kp F9        &kp F10
-&kp F11    &kp F12  &none         &bt BT_CLR    &none             &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_UP  &mmv MOVE_RIGHT
-&kp LSHFT  &none    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &msc SCRL_DOWN  &mkp MB1        &mkp MB4         &mkp MB5      &mkp MB2
-                    &kp LALT      &to 0         &mt LCTRL BSPC    &kp SPACE       &msc SCRL_LEFT  &msc SCRL_RIGHT
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &none           &none           &none            &none         &none
+&kp TAB       &none         &none         &none         &none             &none           &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_UP  &mmv MOVE_RIGHT
+&none         &none         &none         &none         &none             &msc SCRL_DOWN  &mkp MB1        &mkp MB4         &mkp MB5      &mkp MB2
+                            &kp LALT      &to 0         &mt LCTRL BSPC    &kp SPACE       &msc SCRL_LEFT  &msc SCRL_RIGHT
             >;
         };
 
