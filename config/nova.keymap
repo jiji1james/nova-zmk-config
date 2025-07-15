@@ -68,9 +68,9 @@
             //             | ESC |  1  | SPC |   |BSPC |  2  | DEL |
 
             bindings = <
-&kp Q        &as AT W     &kp E        &kp R       &kp T            &as MINUS Y      &as EQUAL U  &as LPAR I      &as RPAR O        &kp P
-&kp A        &as LSHFT S  &as LMETA D  &as LALT F  &as LCTRL G      &kp H            &kp J        &kp K           &kp L             &kp BSPC
-&mt LSHFT Z  &kp X        &kp C        &kp V       &kp B            &kp N            &kp M        &as SEMI COMMA  &as COLON PERIOD  &mt RSHFT FSLH
+&as GRAVE Q  &as AT W     &kp E        &kp R       &kp T            &as MINUS Y      &as EQUAL U  &as LPAR I      &as RPAR O        &kp P
+&kp A        &as LSHFT S  &as LMETA D  &as LALT F  &as LCTRL G      &as RCTRL H      &as RALT J   &as RMETA K     &kp RSHIFT L      &kp BSPC
+&mt LSHFT Z  &kp X        &kp C        &as LBKT V  &as RBKT B       &as LBRC N       &as RRBC M   &as SEMI COMMA  &as FSLH PERIOD   &kp RET
                           &kt LALT     &to 2       &mt LCTRL TAB    &mt RCTRL SPACE  &mo 1        &kp RET
             >;
         };
