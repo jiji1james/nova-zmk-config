@@ -35,7 +35,7 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <400>;
+            tapping-term-ms = <300>;
         };
     };
 
@@ -51,9 +51,9 @@
 
             bindings = <
 &as GRAVE Q  &as AT W     &kp E        &kp R       &kp T          &as MINUS Y  &as EQUAL U  &as LPAR I      &as RPAR O       &as BSLH P
-&kp A        &as LSHFT S  &as LMETA D  &as LALT F  &as LCTRL G    &as RCTRL H  &as RALT J   &as RMETA K     &as RSHIFT L     &kp BSPC
+&kp A        &as LSHFT S  &as LMETA D  &as LALT F  &as LCTRL G    &as RCTRL H  &as RALT J   &as LMETA K     &as RSHIFT L     &kp BSPC
 &mt LSHFT Z  &kp X        &kp C        &as LBKT V  &as RBKT B     &as LBRC N   &as RBRC M   &as SEMI COMMA  &as FSLH PERIOD  &kp RET
-                          &kt LALT     &to 2       &kp TAB        &kp SPACE    &mo 1        &kp RSHFT
+                          &none        &to 2       &kp TAB        &kp SPACE    &mo 1        &none
             >;
         };
 
@@ -65,10 +65,10 @@
             //             | ESC |  1  | SPC |   |BSPC |  2  | DEL |
 
             bindings = <
-&as EXCL N1      &as AT N2  &as HASH N3  &as DLLR N4  &as PRCNT N5     &as CARET N6  &as AMPS N7  &as ASTRK N8  &as LPAR N9     &as RPAR N0
-&as TILDE GRAVE  &kp LEFT   &kp UP       &kp DOWN     &kp RIGHT        &kp MINUS     &kp EQUAL    &kp LBKT      &kp RBKT        &kp BSPC
-&kp LSHFT        &kp HOME   &kp PG_UP    &kp PG_DN    &kp END          &kp DEL       &none        &as DQT SQT   &as COLON SEMI  &kp BSLH
-                            &kp ESC      &to 0        &mt LCTRL TAB    &trans        &trans       &trans
+&as EXCL N1      &as AT N2  &as HASH N3  &as DLLR N4  &as PRCNT N5    &as CARET N6  &as AMPS N7  &as ASTRK N8  &as LPAR N9     &as RPAR N0
+&as TILDE GRAVE  &kp LEFT   &kp UP       &kp DOWN     &kp RIGHT       &kp MINUS     &kp EQUAL    &kp LBKT      &kp RBKT        &kp BSPC
+&kp LSHFT        &kp HOME   &kp PG_UP    &kp PG_DN    &kp END         &kp DEL       &none        &as DQT SQT   &as COLON SEMI  &kp BSLH
+                            &trans       &to 0        &trans          &trans        &trans       &trans
             >;
         };
 
