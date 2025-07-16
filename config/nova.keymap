@@ -26,24 +26,6 @@
             key-positions = <23 24>;
             layers = <0>;
         };
-
-        combo-lbrc {
-            bindings = <&kp LBRC>;
-            key-positions = <12 13>;
-            layers = <0>;
-        };
-
-        combo-rbrc {
-            bindings = <&kp RBRC>;
-            key-positions = <14 13>;
-            layers = <0>;
-        };
-
-        combo_bt_clear {
-            bindings = <&bt BT_CLR>;
-            key-positions = <12 13 14>;
-            layers = <3>;
-        };
     };
 
     behaviors {
@@ -68,10 +50,10 @@
             //             | ESC |  1  | SPC |   |BSPC |  2  | DEL |
 
             bindings = <
-&as GRAVE Q  &as AT W     &kp E        &kp R       &kp T            &as MINUS Y      &as EQUAL U  &as LPAR I      &as RPAR O        &kp P
-&kp A        &as LSHFT S  &as LMETA D  &as LALT F  &as LCTRL G      &as RCTRL H      &as RALT J   &as RMETA K     &kp RSHIFT L      &kp BSPC
-&mt LSHFT Z  &kp X        &kp C        &as LBKT V  &as RBKT B       &as LBRC N       &as RRBC M   &as SEMI COMMA  &as FSLH PERIOD   &kp RET
-                          &kt LALT     &to 2       &mt LCTRL TAB    &mt RCTRL SPACE  &mo 1        &kp RET
+&as GRAVE Q  &as AT W     &kp E        &kp R       &kp T          &as MINUS Y  &as EQUAL U  &as LPAR I      &as RPAR O       &as BSLH P
+&kp A        &as LSHFT S  &as LMETA D  &as LALT F  &as LCTRL G    &as RCTRL H  &as RALT J   &as RMETA K     &as RSHIFT L     &kp BSPC
+&mt LSHFT Z  &kp X        &kp C        &as LBKT V  &as RBKT B     &as LBRC N   &as RBRC M   &as SEMI COMMA  &as FSLH PERIOD  &kp RET
+                          &kt LALT     &to 2       &kp TAB        &kp SPACE    &mo 1        &kp RSHFT
             >;
         };
 
