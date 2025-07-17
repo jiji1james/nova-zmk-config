@@ -50,10 +50,10 @@
             //             | ESC |  1  | SPC |   |BSPC |  2  | DEL |
 
             bindings = <
-&mt GRAVE Q  &mt AT W     &kp E        &kp R       &kp T          &mt MINUS Y  &mt EQUAL U  &mt LPAR I      &mt RPAR O       &mt BSLH P
-&kp A        &mt LSHFT S  &mt LMETA D  &mt LALT F  &mt LCTRL G    &mt RCTRL H  &mt RALT J   &mt LMETA K     &mt RSHIFT L     &kp BSPC
-&mt LSHFT Z  &kp X        &kp C        &mt LBKT V  &mt RBKT B     &mt LBRC N   &mt RBRC M   &mt SEMI COMMA  &mt FSLH PERIOD  &kp RET
-                          &none        &to 2       &kp TAB        &kp SPACE    &mo 1        &none
+&mt GRAVE Q  &mt AT W     &kp E        &kp R       &kp T          &kp Y        &kp U       &kp I        &kp O         &kp BSLH
+&kp A        &mt LSHFT S  &mt LMETA D  &mt LALT F  &mt LCTRL G    &mt RCTRL H  &mt RALT J  &mt LMETA K  &mt RSHIFT L  &kp BSPC
+&kp Z        &kp X        &kp C        &kp V       &kp B          &kp N        &kp M       &kp COMMA    &kp PERIOD    &kp FSLH
+                          &none        &mo 2       &kp TAB        &kp SPACE    &mo 1       &none
             >;
         };
 
@@ -65,19 +65,19 @@
             //             | ESC |  1  | SPC |   |BSPC |  2  | DEL |
 
             bindings = <
-&mt EXCL N1      &mt AT N2  &mt HASH N3  &mt DLLR N4  &mt PRCNT N5    &mt CARET N6  &mt AMPS N7  &mt ASTRK N8  &mt LPAR N9     &mt RPAR N0
-&mt TILDE GRAVE  &kp LEFT   &kp UP       &kp DOWN     &kp RIGHT       &kp MINUS     &kp EQUAL    &kp LBKT      &kp RBKT        &kp BSPC
-&kp LSHFT        &kp HOME   &kp PG_UP    &kp PG_DN    &kp END         &kp DEL       &none        &mt DQT SQT   &mt COLON SEMI  &kp BSLH
-                            &trans       &to 0        &trans          &trans        &trans       &trans
+&mt EXCL N1      &mt AT N2  &mt HASH N3  &mt DLLR N4  &mt PRCNT N5    &mt CARET N6  &mt AMPS N7  &mt ASTRK N8   &mt LPAR N9    &mt RPAR N0
+&mt TILDE GRAVE  &kp LEFT   &kp UP       &kp DOWN     &kp RIGHT       &kp MINUS     &kp EQUAL    &mt LBKT LBRC  &mt RBKT RBRC  &kp BSPC
+&kp LSHFT        &kp HOME   &kp PG_UP    &kp PG_DN    &kp END         &kp DEL       &kp SQT      &kp SEMI       &kp BSLH       &kp RET
+                            &trans       &trans       &trans          &trans        &trans       &trans
             >;
         };
 
         mouse {
             bindings = <
-&kp F1   &kp F2  &kp F3          &kp F4           &kp F5            &kp F6          &kp F7          &kp F8          &mt F11 F9    &mt F12 F10
-&kp TAB  &none   &msc SCRL_LEFT  &msc SCRL_RIGHT  &msc SCRL_UP      &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
-&kp TAB  &none   &none           &none            &msc SCRL_DOWN    &msc SCRL_DOWN  &mkp MB1        &mkp MB4        &mkp MB5      &mkp MB2
-                 &trans          &to 0            &trans            &trans          &trans          &trans
+&kp F1  &kp F2  &kp F3          &kp F4           &kp F5            &kp F6  &kp F7          &kp F8          &mt F11 F9    &mt F12 F10
+&none   &none   &msc SCRL_LEFT  &msc SCRL_RIGHT  &msc SCRL_UP      &none   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
+&none   &none   &none           &none            &msc SCRL_DOWN    &none   &mkp MB1        &mkp MB4        &mkp MB5      &mkp MB2
+                &trans          &trans           &trans            &trans  &trans          &trans
             >;
         };
 
