@@ -12,20 +12,7 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        combo_esc {
-            bindings = <&kp ESC>;
-            key-positions = <0 1>;
-        };
-
-        combo_ret {
-            bindings = <&kp RET>;
-            key-positions = <23 24>;
-            layers = <0>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     behaviors {
         as: auto_shift {
@@ -49,10 +36,10 @@
             // |              |  LALT|  RET |  TAB |      | SPACE|  1   | LMETA|
 
             bindings = <
-&as LS(Q) Q         &as LS(W) W         &as LS(E) E         &as LS(R) R         &as LS(T) T         &as LS(Y) Y         &as LS(U) U         &as LS(I) I         &as LS(O) O         &as LS(P) P
-&as LS(A) A         &as LS(S) S         &as LS(D) D         &as LS(F) F         &as LS(G) G         &as LS(H) H         &as LS(J) J         &as LS(K) K         &as LS(L) L         &as LS(BSPC) BSPC
-&as LS(Z) Z         &as LS(X) X         &as LS(C) C         &as LS(V) V         &as LS(B) B         &as LS(N) N         &as LS(M) M         &as LS(COMMA) COMMA &as LS(PERIOD) PERIOD &as LS(FSLH) FSLH
-                                        &as LS(LALT) LALT   &lt 2 RET           &mt LCTRL TAB       &mt RSHFT SPACE     &mo 1               &as LS(LMETA) LMETA
+&as LS(Q) Q  &as LS(W) W  &as LS(E) E  &as LS(R) R  &as LS(T) T      &as LS(Y) Y      &as LS(U) U  &as LS(I) I          &as LS(O) O            &as LS(P) P
+&as LS(A) A  &as LS(S) S  &as LS(D) D  &as LS(F) F  &as LS(G) G      &as LS(H) H      &as LS(J) J  &as LS(K) K          &as LS(L) L            &kp BSPC
+&as LS(Z) Z  &as LS(X) X  &as LS(C) C  &as LS(V) V  &as LS(B) B      &as LS(N) N      &as LS(M) M  &as LS(COMMA) COMMA  &as LS(PERIOD) PERIOD  &as LS(FSLH) FSLH
+                          &kp LALT     &lt 2 RET    &mt LCTRL TAB    &mt RSHFT SPACE  &mo 1        &kp LMETA
             >;
         };
 
