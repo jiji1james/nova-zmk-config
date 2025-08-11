@@ -51,19 +51,19 @@
             //             | ESC |  1  | SPC |   |BSPC |  2  | DEL |
 
             bindings = <
-&mt EXCL N1  &mt AT N2  &mt HASH N3  &mt DLLR N4  &mt PRCNT N5    &mt CARET N6  &mt AMPS N7  &mt ASTRK N8   &mt LPAR N9    &mt RPAR N0
-&kp TILDE    &kp LEFT   &kp UP       &kp DOWN     &kp RIGHT       &kp MINUS     &kp EQUAL    &mt LBKT LBRC  &mt RBKT RBRC  &kp BSPC
-&kp GRAVE    &kp HOME   &kp PG_UP    &kp PG_DN    &kp END         &kp DEL       &kp PERIOD   &kp SEMI       &kp SQT        &kp BSLH
-                        &trans       &trans       &kp RET         &kp ESC       &trans       &trans
+&mt EXCL N1  &mt AT N2  &mt HASH N3     &mt DLLR N4  &mt PRCNT N5    &mt CARET N6  &mt AMPS N7  &mt ASTRK N8   &mt LPAR N9    &mt RPAR N0
+&kp TILDE    &kp LEFT   &kp UP          &kp DOWN     &kp RIGHT       &kp MINUS     &kp EQUAL    &mt LBKT LBRC  &mt RBKT RBRC  &kp BSPC
+&kp GRAVE    &kp HOME   &kp PG_UP       &kp PG_DN    &kp END         &kp DEL       &kp PERIOD   &kp SEMI       &kp SQT        &kp BSLH
+                        &kp LEFT_SHIFT  &trans       &kp RET         &kp ESC       &trans       &trans
             >;
         };
 
         function {
             bindings = <
-&kp F1     &kp F2    &kp F3        &kp F4    &kp F5       &kp F6    &kp F7     &kp F8     &mt F11 F9  &mt F12 F10
-&kp TILDE  &kp LEFT  &kp UP_ARROW  &kp DOWN  &kp RIGHT    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT   &none
-&kp GRAVE  &kp AT    &none         &none     &none        &kp DEL   &kp COMMA  &kp COLON  &kp DQT     &kp PIPE
-                     &trans        &trans    &kp RET      &kp ESC   &trans     &trans
+&kp F1     &kp F2    &kp F3          &kp F4    &kp F5       &kp F6     &kp F7     &kp F8          &mt F11 F9  &mt F12 F10
+&kp TILDE  &kp LEFT  &kp UP_ARROW    &kp DOWN  &kp RIGHT    &kp UNDER  &kp PLUS   &kp LEFT_BRACE  &kp RBRC    &kp BACKSPACE
+&kp GRAVE  &kp AT    &none           &kp LPAR  &kp RPAR     &kp DEL    &kp COMMA  &kp COLON       &kp DQT     &kp PIPE
+                     &kp LEFT_SHIFT  &trans    &kp RET      &kp ESC    &trans     &trans
             >;
         };
 
